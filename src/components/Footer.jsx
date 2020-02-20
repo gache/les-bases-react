@@ -1,10 +1,9 @@
 import React from 'react'
- 
-// Function Expression si je veux je ne peux pas déclarer return en react les deux parenthèses () qui contient dans notre exemple le footer c'est return. Avec cette functuin on a  moin ligne de code.
 
-const Footer  = () => ( // retour 
+// J'injecte mon Props dans mon composant. à ma fonction je mets entre les parenthèse des accolade et à l'intérieur mon Props. et je déclare mon Props ou je veux qu'il s'affiche.
+const Footer  = ({ annee }) => ( 
        <footer>
-           <p>© Copyright 2020 Erick Franco. Tous droits réservés </p>
+           <p>© Copyright {annee} Erick Franco. Tous droits réservés </p>
        </footer>
     );
 
