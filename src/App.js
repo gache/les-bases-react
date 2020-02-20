@@ -1,35 +1,20 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 function App() {
-    //  En react on peut melange code html avec du Javascript grâce à JSX.
-
-
-    /* Par exemple en dehors de return je peux créer de variables, faire une condition n'importe quel code de javascript. 
-    Dans notre exemple  pour que la valeur de la variable message s’affiche dans notre balise h1. 
-    Il faut lui dire à JSX qu'il faut l'interpréter cette variable comme du Javascript et pas comme un text du coup il faut mettre notre variable entre accolade.
-     */
-const edad = 18;
-let message;
-
-
-if (edad >= 18) {
-  message = "Tu es Major";
-} else {
-  message = "tu es Mineur";
-}
-// tout ce qui est à l'intérieur de return c’est le qu’on voit dans la page.
+// 
   return (
-    //
-    <div className="App">
-      <h1> Hola { message } </h1> 
-      {/* Composant */}
-        <div>
-            <Header />
-        </div>
+    //return retourne un élément on peut mettre un div mais le mieux c’est d’importer Fragment. le return va retourner Fragment  et lui contient l'ensembles des composants. On utilise Fragment car il ne va pas créer du code html de plus à ma page cas contraire d’une div. 
+    <Fragment>
 
-    </div>
+      {/* Composant */}
+
+      <Header />
+      <Footer />  
+
+    </Fragment>
   );
 }
 
